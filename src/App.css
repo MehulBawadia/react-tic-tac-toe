@@ -10,6 +10,11 @@ body {
   margin: 1rem;
 }
 
+.playerStatus {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .App {
   margin-top: 5rem;
   display: flex;

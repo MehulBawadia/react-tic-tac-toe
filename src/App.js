@@ -80,6 +80,8 @@ function App() {
     <div>
       <h1 className="title">TicTacToe Game in ReactJs</h1>
 
+      <div className="playerStatus">Player to play: {player}</div>
+
       <div className="App">
         <div className="board">
           <div className="row">
