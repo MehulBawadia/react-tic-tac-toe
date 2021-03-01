@@ -22,6 +22,7 @@ function App() {
   useEffect(() => {
     if (result.status != "none") {
       alert(`Game Finished! Winning Player: ${result.winner}`);
+      restartGame();
     }
   }, [result]);
 
@@ -68,6 +69,11 @@ function App() {
     if (filled) {
       setResult({ winner: "No One.", status: "tie" });
     }
+  };
+
+  const restartGame = () => {
+    setBoard(["", "", "", "", "", "", "", "", ""]);
+    setPlayer("O");
   };
 
   return (
