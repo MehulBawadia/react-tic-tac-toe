@@ -79,9 +79,7 @@ function App() {
   return (
     <div>
       <h1 className="title">TicTacToe Game in ReactJs</h1>
-
       <div className="playerStatus">Player to play: {player}</div>
-
       <div className="App">
         <div className="board">
           <div className="row">
@@ -147,6 +145,16 @@ function App() {
             />
           </div>
         </div>
+      </div>
+
+      <div className="flexCenter">
+        <a
+          href="https://github.com/MehulBawadia/react-tic-tac-toe"
+          target="_blank"
+          className="linkViewSource"
+        >
+          Click here to view the source code
+        </a>
       </div>
     </div>
   );
