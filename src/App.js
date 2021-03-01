@@ -1,9 +1,20 @@
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
+
   return (
-    <div className="App">
-      <h1>Tic Tac Toe Game in ReactJs</h1>
+    <div>
+      <h1 className="title">TicTacToe Game in ReactJs</h1>
+
+      <div className="App">
+        <div className="board">
+          <div className="row"></div>
+          <div className="row"></div>
+          <div className="row"></div>
+        </div>
+      </div>
     </div>
   );
 }
