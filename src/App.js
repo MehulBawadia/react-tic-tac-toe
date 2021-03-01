@@ -5,11 +5,12 @@ import { Patterns } from "./Patterns";
 
 function App() {
   const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
-  const [player, setPlayer] = useState("X");
+  const [player, setPlayer] = useState("O");
   const [result, setResult] = useState({ winner: "none", status: "none" });
 
   useEffect(() => {
     checkWinner();
+    checkIfTie();
 
     if (player == "X") {
       setPlayer("O");
@@ -53,6 +54,20 @@ function App() {
         setResult({ winner: player, status: "won" });
       }
     });
+  };
+
+  const checkIfTie = () => {
+    let filled = true;
+
+    board.forEach((square) => {
+      if (square == "") {
+        filled = false;
+      }
+    });
+
+    if (filled) {
+      setResult({ winner: "No One.", status: "tie" });
+    }
   };
 
   return (
