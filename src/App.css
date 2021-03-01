@@ -41,3 +41,7 @@ body {
   place-items: center;
   font-size: 2rem;
 }
+
+.square:active {
+  background-color: #64f4c4;
+}
